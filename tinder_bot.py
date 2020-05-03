@@ -8,6 +8,9 @@ from time import sleep, time
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.chrome.options import Options
 
+LIKE_BUTTON_XPATH = '//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button'
+DISLIKE_BUTTON_XPATH = '//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[2]/button'
+
 
 class TinderBot:
     """ Tinder bot class with all the methods"""
@@ -43,12 +46,12 @@ class TinderBot:
 
     def swipe_right(self):
         """Method to swipe right on the current profile"""
-        btn_like = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button')
+        btn_like = self.driver.find_element_by_xpath(LIKE_BUTTON_XPATH)
         btn_like.click()
 
     def swipe_left(self):
         """Method to swipe left of the current profile"""
-        btn_dislike = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[2]/button')
+        btn_dislike = self.driver.find_element_by_xpath(DISLIKE_BUTTON_XPATH)
         btn_dislike.click()
 
     def rand_sleep(self):
