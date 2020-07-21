@@ -2,6 +2,8 @@
 
 **Disclaimer**: This script is just for educational purpose
 
+Article Link: [Coding a Tinder Bot in Python with Selenium](https://oddblogger.com/tinder-bot-python-selenium/)
+
 This python script will save your time by auto swiping in your tinder account and will 
 save the stats in a file.
 
